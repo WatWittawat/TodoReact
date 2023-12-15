@@ -1,0 +1,43 @@
+.tasks {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid rgb(78, 54, 54);
+  border-radius: 10px;
+  background: rgb(37, 42, 52);
+  gap: 12px;
+}
+
+.checkpoint {
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+}
+
+.checkpoint div {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 2px solid #4ea8de;
+}
+
+.checkpoint svg {
+  width: 20px;
+  height: 20px;
+  color: rgb(255, 46, 99);
+}
+
+.task p {
+  font-size: 14px;
+  line-height: 19px;
+  color: rgb(255, 46, 99);
+  margin-right: auto;
+}
+
+p.textcomplete {
+  color: rgb(255, 46, 99);
+  text-decoration: line-through;
+}
