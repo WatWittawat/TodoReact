@@ -40,7 +40,7 @@
 .newTask button {
   height: 100%;
   padding: 0 16px;
-  background: rgb(76, 185, 231);
+  background: #435585;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -49,4 +49,10 @@
   gap: 6px;
   font-weight: 700;
   font-size: 16px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.newTask button:active {
+  background: #2c3858;
+  transform: scale(0.9);
 }
