@@ -21,23 +21,25 @@
   width: 20px;
   height: 20px;
   border-radius: 999px;
-  border: 2px solid #4ea8de;
+  border: 2px solid rgb(255, 209, 227);
 }
 
 .checkpoint svg {
   width: 20px;
   height: 20px;
-  color: rgb(255, 46, 99);
+  color: rgb(207, 81, 114);
 }
 
-.task p {
-  font-size: 14px;
+.tasks p {
+  font-size: 17px;
   line-height: 19px;
-  color: rgb(255, 46, 99);
   margin-right: auto;
+  overflow: hidden;
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
 }
 
 p.textcomplete {
-  color: rgb(255, 46, 99);
+  color: rgb(255, 255, 255, 0.5);
   text-decoration: line-through;
 }

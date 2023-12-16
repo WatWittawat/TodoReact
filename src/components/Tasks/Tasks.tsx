@@ -1,23 +1,35 @@
 import styles from "./Tasks.module.css";
 import { TbTrash } from "react-icons/tb";
+import { BsFillCheckCircleFill } from "react-icons/bs";
 
-function Tasks() {
+type TaskProps = {
+  task: {
+    id: string;
+    title: string;
+    isCompleted: boolean;
+  };
+  taskToggle: (taskId: string) => void;
+  DeletePost: (taskId: string) => void;
+};
+
+const Tasks: React.FC<TaskProps> = ({ task, taskToggle, DeletePost }) => {
   return (
     <div className={styles.tasks}>
-      <button className={styles.checkpoint}>
-        <div />
+      <button className={styles.checkpoint} onClick={() => taskToggle(task.id)}>
+        {task.isCompleted ? (
+          <BsFillCheckCircleFill></BsFillCheckCircleFill>
+        ) : (
+          <div />
+        )}
       </button>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, sequi!
-        Explicabo repellat iusto velit laborum voluptatum sunt pariatur unde
-        consequuntur rem quisquam alias maiores commodi porro, aspernatur
-        debitis exercitationem accusantium.
+      <p className={task.isCompleted ? styles.textcomplete : ""}>
+        {task.title}
       </p>
-      <button className={styles.checkpoint}>
+      <button className={styles.checkpoint} onClick={() => DeletePost(task.id)}>
         <TbTrash></TbTrash>
       </button>
     </div>
   );
-}
+};
 
 export default Tasks;
